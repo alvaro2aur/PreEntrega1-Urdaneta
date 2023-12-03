@@ -1,5 +1,5 @@
-const ItemListContainer = () => {
-    return ( <div>ItemListContainer</div> );
+const ItemListContainer = ({greeting}) => {
+    return ( <div>ItemListContainer: {greeting}</div> );
 }
  
 export default ItemListContainer;
