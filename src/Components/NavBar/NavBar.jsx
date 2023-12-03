@@ -28,6 +28,7 @@ const NavBar = () => {
               <NavDropdown.Item href="#action4">Spring</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <CardWidget />
         </Navbar.Collapse>
       </Container>
     </Navbar>
