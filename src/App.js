@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <ItemListContainer greeting={'Message through props'} />
+      <ItemListContainer/>
     </div>
   );
 }
