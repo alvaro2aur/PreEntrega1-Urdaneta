@@ -1,7 +1,7 @@
 services:
   app:
     # image: node:lts-buster-slim
-    container_name: Preentrega1-Urdaneta
+    container_name: react-code
     build: .
     volumes:
       - .:/app
