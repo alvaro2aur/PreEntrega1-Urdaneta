@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
+import { get } from '../../utils/api';
 
 
 const ItemListContainer = () => {
@@ -18,16 +19,21 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    const fetch = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        console.log('llego la data')
-        resolve(mock)
-      }, 10000);
-    })
-    fetch.then((data) => {
-      console.log('hola')
+    const fetch = async () => {
+      const data = await get('https://fakestoreapi.com/products')
       setProducts(data)
-    })
+    }
+    fetch()
+    // const fetch = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     console.log('llego la data')
+    //     resolve(mock)
+    //   }, 10000);
+    // })
+    // fetch.then((data) => {
+    //   console.log('hola')
+    //   setProducts(data)
+    // })
   },[])
 
   return (

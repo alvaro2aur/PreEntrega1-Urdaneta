@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import CardWidget from '../CardWidget/CardWidget';
+import { Link } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -19,9 +20,9 @@ const NavBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Women</Nav.Link>
-            <Nav.Link href="#action1">Man</Nav.Link>
-            <Nav.Link href="#action2">Kids</Nav.Link>
+            <Nav.Link><Link to={'/item'}></Link>Women</Nav.Link>
+            <Nav.Link><Link to={'/item'}></Link>Man</Nav.Link>
+            <Nav.Link><Link to={'/item'}></Link>Kids</Nav.Link>
             <NavDropdown title="Fragrances" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Floral</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Wood</NavDropdown.Item>
